@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden; /* Prevent scrolling */
+        position: relative;
+    }
+
+    h1, p {
+        margin-bottom: 20px;
+    }
+
+    #menu-heart {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        color: white;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+    <div id="menu-heart">❤️</div>
+    <h1>Happy Valentine's Day Feyi <span id="rose">🌹</span></h1>
+    <p>Thank you for being you.. I LOVE YOU ❤️</p>
+    <footer>Made with ❤️ by Kelvin</footer>
+
+<script>
+    var heartEmojis = ['❤️', '🌹',  '💕', '😍', '🥰', '🫂', '💑', '✨', '🩷', '❣️', '💖', '💝'];
+    var menuHeart = document.getElementById('menu-heart');
+    var index = 0;
+
+    setInterval(function() {
+        index = (index + 1) % heartEmojis.length;
+        menuHeart.textContent = heartEmojis[index];
+    }, 2000);
+</script>
+</body>
+</html>
